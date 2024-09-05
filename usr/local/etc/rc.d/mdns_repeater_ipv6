@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# PROVIDE: mdns_repeater_ipv6
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name="mdns_repeater_ipv6"
+rcvar="${name}_enable"
+
+load_rc_config $name
+: ${mdns_repeater_ipv6_enable:="NO"}
+: ${mdns_repeater_ipv6_args:=""}
+
+command="/usr/sbin/daemon"
+command_args="-P /var/run/${name}.pid /usr/local/bin/mdns_repeater_ipv6.py ${mdns_repeater_ipv6_args}"
+pidfile="/var/run/${name}.pid"
+
+run_rc_command "$1"

@@ -1,0 +1,2 @@
+mdns_repeater_ipv6_enable="YES"
+mdns_repeater_ipv6_args="-l <listen_iface> -f <forward_iface>"
