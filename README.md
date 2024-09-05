@@ -1,6 +1,6 @@
 # MDNS Repeater IPv6
 
-This is a FreeBSD service that will forward IPv6 mDNS requests between interfaces.  Meant to be run on pfSense/OPNsense.
+This is a FreeBSD service that will forward IPv6 mDNS requests between 2 interfaces.  It is meant to be run on pfSense/OPNsense, but should work on FreeBSD and any derivative. 
 
 ### To use: 
 
